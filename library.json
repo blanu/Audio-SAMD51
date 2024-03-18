@@ -1,32 +1,31 @@
 {
-  "name": "Audio",
+  "name": "Audio-SAMD51",
   "frameworks": "Arduino",
-  "platforms": "Teensy",
+  "platforms": "samd",
   "keywords": "sound, audio, FFT, filter, effect",
-  "description": "Teensy Audio Library",
-  "url": "http://www.pjrc.com/teensy/td_libs_Audio.html",
+  "description": "An extraction of the platform-specific code from Adafruit's SAMD51 port of the Teensy Audio Library",
+  "url": "https://blog.blacklightunicorn.com",
   "version": "1.3",
-  "export": {
-    "exclude": [
-      "gui",
-      "extras"
-    ]
-  },
   "authors":
   {
-    "name": "Paul Stoffregen",
+    "name": "Blacklight Unicorn",
     "maintainer": true
   },
   "repository":
   {
     "type": "git",
-    "url": "https://github.com/PaulStoffregen/Audio"
+    "url": "https://github.com/blanu/Audio-SAMD51"
   },
   "dependencies":
-  {
-    "name": "SerialFlash",
-    "frameworks": "arduino"
-  },
+  [
+      {
+        "name": "SerialFlash",
+        "frameworks": "arduino"
+      },
+      {
+          "name": "Audio-core",
+      }
+  ],
   "examples": [
     "examples/*/*.ino",
     "examples/*/*/*.ino"
